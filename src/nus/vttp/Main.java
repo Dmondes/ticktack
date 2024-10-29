@@ -35,10 +35,11 @@ public class Main {
             } else if (whoWin == 0 && counter == 9){
                 System.out.println("Tie game");
             }
-        } 
-
+        }
+        scan.close();
     }
 
+    //Generate the board
     @SuppressWarnings("rawtypes")
     public static ArrayList<ArrayList> generateBoard() {
         ArrayList<ArrayList> board = new ArrayList<>();
@@ -62,7 +63,7 @@ public class Main {
         });
         return board;
     }
-
+    //Check combination for win
     public static int checkWin(ArrayList<ArrayList> board) {
         String r1c1 = (String) board.get(0).get(0);
         String r1c2 = (String) board.get(0).get(1);
